@@ -21,3 +21,5 @@
 ### Experience
 ### Education
 ### Languages
+* **Russian**: Native
+* **English**: A2

@@ -20,6 +20,7 @@
 ### Code Example
 ### Experience
 ### Education
+* ETU "LETI" (Saint Petersburg electrotechnical university)
 ### Languages
 * **Russian**: Native
 * **English**: A2

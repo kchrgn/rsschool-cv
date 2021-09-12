@@ -7,7 +7,7 @@
 
 ------
 ### Profile
-    I want to learn Front-End Development 
+    I want to learn Front-End Development   
 ### Skills
 * HTML5, CSS3 Basics
 * JavaScript Basics

@@ -1,0 +1,15 @@
+.content {
+    margin: 0 auto;
+    background-color: rgb(164, 229, 147);
+    font-family: Arial, Tahoma, sans-serif;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mygithub {
+    display: flex;
+
+}

@@ -47,6 +47,7 @@ body {
 .navbar-menu li a {
     text-decoration: none;
     display: block;
+    color: white;
 }
 .navbar-menu li:hover {
     background-color: #FF8500;

@@ -89,7 +89,7 @@ h2 {
 .col-left{
     display: flex;
     width: 20%;
-    padding: 0 10px;
+    padding: 10px;
     color: #024C68;
 
 }

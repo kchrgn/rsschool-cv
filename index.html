@@ -4,31 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/cv.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/default.min.css">
 </head>
 <body>
-    <div class="content">
+    <div class="centered-content" >
         <header>
-            <h1>Andrey Kochergin</h1>
-            <h3>Front-end Developer</h3>
+            <!--Navbar-->
+            <nav class="navbar">
+                <ul class="navbar-menu" id="navbar-menu"  onclick="closeBurgerMenu()">
+                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#code">Code</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                </ul>
+                <a class="navbar-burger" href="javascript:void(0);"  onclick="toggleBurgerMenu()">
+                    <img src="./icons/icons8-menu-24.png" alt="Menu" width="24" height="24">
+                </a>
+            </nav>
+            <!--Title-->
+            <article class="row-title">
+                <figure class="col-left">
+                    <img src="./images/kchrgn_small.png" alt="My photo" width="200" height="200">
+                </figure>
+                <div class="col-right title">
+                    <h1>Andrey Kochergin</h1>
+                    <h2>Front-end Developer</h2>                 
+                </div>
+            </article>
         </header>
+
+
         <main>
-            <section class="contacts">
-                <h3>Contacts</h3>
-                <ul>
+            <!--Contacts-->
+            <section class="row jump-light" id="contacts">
+                <h3 class="col-left" >Contacts</h3>
+                <ul class="col-right">
                     <li><b>Email:</b> kchrgn@gmail.com</li>
                     <li><b>Telegram:</b> @akchrgn</li>
                     <li><b>Linkedin:</b> <a href="https://www.linkedin.com/in/%D0%B0%D0%BD%D0%B4%D1%80%D0%B5%D0%B9-%D0%BA%D0%BE%D1%87%D0%B5%D1%80%D0%B3%D0%B8%D0%BD-b673588b/">Andrey Kochergin</a></li>
                 </ul>
             </section>
-            <section class="profile">
-                <h3>Profile</h3>
-                <p>I want to learn Front-End Development</p>
+ 
+            <!--Profile-->
+            <section class="row jump-light" id="profile">
+                <h3 class="col-left" >Profile</h3>
+                <p class="col-right">&nbsp; &nbsp; I want to learn Front-End Development</p>
             </section>
-            <section class="skills">
-                <h3>Skills</h3>
-                <ul>
+            <!--Skills-->
+            <section class="row" id="skills">
+                <h3 class="jump-light col-left" >Skills</h3>
+                <ul class="col-right" style="list-style-position: inside">
                     <li>HTML5, CSS3 Basics</li>
                     <li>JavaScript Basics</li>
                     <li>Node.js Basics</li>
@@ -38,30 +68,44 @@
                     <li>C++</li>
                 </ul>
             </section>
-            <section class="code">
-                <h3>Code Example</h3>
+            <!--Code-->
+            <section  class="row" id="code">
+                <h3 class="jump-light col-left" > Code Example</h3>
+                <div class="col-right">
+                    <p>&nbsp; &nbsp; In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.</p>
+                    <pre><code class="language-javascript">
+    function highAndLow(numbers){
+        let a = numbers.split(' ').sort((a, b) => a - b);
+        return a[a.length - 1] + " " + a[0];
+        }
+                    </code></pre>
+                </div>
             </section>
-            <section class="experience">
-                <h3>Experience</h3>
-                <ul>
+            <!--Experience-->
+            <section  class="row" id="experience">
+                <h3 class="jump-light col-left" >Experience</h3>
+                <ul class="col-right">
                     <li>SPF System-Service JSC, August 2000 - Present</li>
                 </ul>
             </section>
-            <section class="education">
-                <h3>Education</h3>
-                <ul>
+            <!--Education-->
+            <section  class="row" id="education">
+                <h3 class="jump-light col-left" >Education</h3>
+                <ul class="col-right">
                     <li>RS Schools Course «JavaScript/Front-end. 2021Q3» (in progress)</li>
                     <li>ETU "LETI" (Saint Petersburg electrotechnical university)</li>
                 </ul>
             </section>
-            <section class="languages">
-                <h3>Languages</h3>
-                <ul>
+            <!--Languages-->
+            <section  class="row" id="languages">
+                <h3 class="jump-light col-left">Languages</h3>
+                <ul class="col-right">
                     <li><b>Russian:</b> Native</li>
                     <li><b>English:</b> A2</li>
                 </ul>
             </section>
         </main>
+
         <footer class="footer">
             <a class="mygithub" href="https://github.com/kchrgn">
                 <img src="icons/icons8-github.svg" alt="GitHub" width="48" height="48">
@@ -74,5 +118,37 @@
         </footer>
 
     </div>
+    <script>
+        function toggleBurgerMenu() {
+            let bm = document.getElementById("navbar-menu");
+            bm.classList.toggle("open");
+        }  
+        function closeBurgerMenu() {
+            let bm = document.getElementById("navbar-menu");
+            bm.className = "navbar-menu";
+        }
+        console.log ("Self score: 140/160: \n" +
+                        "1. Верстка валидная: +10\n" +
+                        "2. Вёрстка семантическая (article, figure, footer, header, main, nav, section, h1, h2, h3): +20 \n" +
+                        "3. Для оформления СV используются css-стили: +10 \n" +
+                        "4. контент размещается в блоке, который горизонтально центрируется на странице. Фоновый цвет, если он есть, тянется во всю ширину страницы: +10 \n" +
+                        "5. Вёрстка адаптивная: ни на одном из разрешений экрана до 320px включительно не появляется горизонтальная полоса прокрутки, при этом всё содержание страницы сохраняется: +10 \n" +
+                        "6. Есть адаптивное бургер-меню. Ссылки в пунктах меню ведут на основные разделы CV. При кликах по пунктам меню реализована плавная прокрутка по якорям. При уменьшении ширины экрана меню становится адаптивным.: +10 \n" +
+                        "7. На странице СV присутствует изображение - фото или аватарка автора CV, пропорции изображения не искажены, у изображения есть атрибут alt: +10 \n" +
+                        "8. Контакты для связи и перечень навыков оформлены в виде списка ul > li: +10 \n" +
+                        "9. CV содержит контакты, краткую информацию о себе, навыки, образование, уровень английского: +10 \n" +
+                        "10. CV содержит пример вашего кода (например, решение задачи с сайта codewars) с подсветкой кода: +10 \n" +
+                        "11. CV содержит изображения-ссылки на выполненные вами проекты. При клике по изображению страница проекта открывается в новой вкладке. У каждого проекта есть название, небольшое описание, указан перечень используемых технологий: -10 \n" +
+                        "12. CV выполнено на английском языке: +10 \n" +
+                        "13. Выполнены требования к репозиторию: есть ссылка на задание, скриншот страницы СV, ссылка на деплой страницы CV на GitHub Pages, указана дата дедлайна, выполнена самооценка (самооценку расписываем по пунктам критериев оценки, указывая балл за каждый пункт): +10 \n" +
+                        "14. Есть видеорезюме автора CV на английском языке: -10 \n" +
+                        "15. Дизайн, оформление, качество выполнения CV не ниже чем в примерах CV, приведённых в материалах к заданию: +10 \n");
+
+              
+      
+    </script>
+    <script src="./script/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
 </body>
 </html>

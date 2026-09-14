@@ -1,2 +1,3 @@
-# rsschool-cv
-2026Q3
+https://kchrgn.github.io/rsschool-cv/cv
+
+https://kchrgn.github.io/rsschool-cv/

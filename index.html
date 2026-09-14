@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header>
+    <header class="centered-content">
         <nav>
-            <ul>
-                <li><a href="#contacts">Contacts</a></li>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#code">Code Example</a></li>
-                <li><a href="#expirience">Expirience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#lang">Language</a></li>
+            <ul class="navbar">
+                <li class="navbar-item"><a href="#contacts">Contacts</a></li>
+                <li class="navbar-item"><a href="#profile">Profile</a></li>
+                <li class="navbar-item"><a href="#skills">Skills</a></li>
+                <li class="navbar-item"><a href="#code">Code Example</a></li>
+                <li class="navbar-item"><a href="#expirience">Expirience</a></li>
+                <li class="navbar-item"><a href="#education">Education</a></li>
+                <li class="navbar-item"><a href="#lang">Language</a></li>
             </ul>
         </nav>
         <h1>Andrey Kochergin</h1>
         <h2>Full-stack Developer</h2>
         <img src="./images/kchrgn_small.png" alt="My photo">
     </header>
-    <main>
+    <main class="centered-content">
         <h2 id="contacts">Contacts</h2>
         <ul>
             <li>Email: kchrgn@gmail.com</li>
@@ -42,7 +43,15 @@
         <p></p>
 
         <h2 id="code">Code Example</h2>
-        <h2>Experience</h2>
+        <p>&nbsp; &nbsp; In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.</p>
+        <pre><code>
+        function highAndLow(numbers)
+        {
+            let a = numbers.split(' ').sort((a, b) => a - b);
+            return a[a.length - 1] + " " + a[0];
+        }
+        </code></pre>
+        <h2 id="expirience">Expirience</h2>
         <ul>
             <li>SPF System-Service JSC, August 2000 - Present</li>
         </ul>
@@ -57,7 +66,7 @@
             <li>English: A2</li>
         </ul>
     </main>
-    <footer>
+    <footer class="footer">
         <a href="https://github.com/kchrgn">My github</a>
         <p>2026</p>
         <a href="https://rs.school/courses/javascript">
